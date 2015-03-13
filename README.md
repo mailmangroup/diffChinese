@@ -8,7 +8,7 @@ It is based on, and borrows heavily from, John Resig's Javascript Diff Algorithm
 
 The main difference is that this module supports finding differences in strings containing Chinese or other languages that use multi byte characters and/or don't separate words by spaces.
 
-Here is how the [KAWO.com](http://kawo.com) app uses this package: 
+As an example here is how we at [KAWO.com](http://kawo.com) use this package in our app:
 
 ![Usage example.](diff-example.png)
 
@@ -52,5 +52,5 @@ var afterString = 'the quick brown dog';
 
 var diff = diffChinese( beforeString, afterString );
 
-// => { before: 'the quick brown <del>fox</del>', after: 'the quick brown <ins>fox</ins>' }
+// => { before: 'the quick brown <del>fox</del>', after: 'the quick brown <ins>dog</ins>' }
 ```

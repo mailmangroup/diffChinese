@@ -35,6 +35,9 @@ $RECYCLE.BIN/
 .Spotlight-V100
 .Trashes
 
+# Sublime Config Files
+*.sublime-*
+
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop

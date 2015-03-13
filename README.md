@@ -8,6 +8,11 @@ It is based on, and borrows heavily from, John Resig's Javascript Diff Algorithm
 
 The main difference is that this module supports finding differences in strings containing Chinese or other languages that use multi byte characters and/or don't separate words by spaces.
 
+Here is how the [KAWO.com](http://kawo.com) app uses this package: 
+
+![Usage example.](diff-example.png)
+
+
 ## Installation
 
 ```bash

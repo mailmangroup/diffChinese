@@ -102,24 +102,24 @@
         // REBUILD ORIGINAL STRING
         var os = "";
         for (var i = 0; i < out.o.length; i++) {
-            os += oSpace[i];
             if (out.o[i].text != null) {
+                os += oSpace[i];
                 os += escape(out.o[i].text);
             } else {
                 // WRAP IN <DEL> TAG IF REMOVED
-                os += "<del>" + escape(out.o[i]) + "</del>";
+                os += "<del>" + oSpace[i] + escape(out.o[i]) + "</del>";
             }
         }
 
         // REBUILD NEW STRING
         var ns = "";
         for (var i = 0; i < out.n.length; i++) {
-            ns += nSpace[i];
             if (out.n[i].text != null) {
+                ns += nSpace[i];
                 ns += escape(out.n[i].text);
             } else {
                 // WRAP IN <INS> TAG IF NEW
-                ns += "<ins>" + escape(out.n[i]) + "</ins>";
+                ns += "<ins>" + nSpace[i] + escape(out.n[i]) + "</ins>";
             }
         }
 

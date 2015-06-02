@@ -33,7 +33,7 @@
 
     // GET ALL THE SEPARATORS
     function getSpaces( s ){
-        var ret = s.split(/[\u00ff-\uffff]|\S+/);
+        var ret = s.split(/[\u00ff-\uffff]/);
         if (ret == null) {
             ret = ["\n"];
         } else {
@@ -93,7 +93,7 @@
         n = n.replace(/\s+$/, '');
 
         // GET ALL THE WORDS IN THE STRING. SPLIT BY SPACE. SPLIT BY CHARACTER FOR CHINESE
-        var out = diff(o == "" ? [] : o.match(/[\u00ff-\uffff]|\S+/g), n == "" ? [] : n.match(/[\u00ff-\uffff]|\S+/g));
+        var out = diff(o == "" ? [] : o.match(/[\u00ff-\uffff]/g), n == "" ? [] : n.match(/[\u00ff-\uffff]/g));
 
         // GET ALL THE IN BETWEEN STUFF
         var oSpace = getSpaces(o);

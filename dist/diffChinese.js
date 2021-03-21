@@ -122,7 +122,14 @@
                 ns += "<ins>" + nSpace[i] + escape(out.n[i]) + "</ins>";
             }
         }
+        
+        // SIMPLIFY ELEMENTS BY REMOVING CONSECUTIVE TAGS 
+	    os = os.replaceAll( '</del><del>', '' );
+	    ns = ns.replaceAll( '</ins><ins>', '' );
 
-        return { before : os , after : ns };
+        return {
+            before : os,
+            after : ns
+        };
     };
 }));

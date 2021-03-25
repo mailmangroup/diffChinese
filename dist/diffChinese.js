@@ -122,10 +122,10 @@
                 ns += "<ins>" + nSpace[i] + escape(out.n[i]) + "</ins>";
             }
         }
-        
-        // SIMPLIFY ELEMENTS BY REMOVING CONSECUTIVE TAGS 
-	    os = os.replaceAll( '</del><del>', '' );
-	    ns = ns.replaceAll( '</ins><ins>', '' );
+
+        // SIMPLIFY ELEMENTS BY REMOVING CONSECUTIVE TAGS
+        os = os.replace( /<\/del><del>/g, '' );
+        ns = ns.replace( /<\/ins><ins>/g, '' );
 
         return {
             before : os,
